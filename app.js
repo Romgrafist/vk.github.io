@@ -1,5 +1,16 @@
 // Инициализация VK Bridge
-vkBridge.send("VKWebAppInit");
+bridge.send('VKWebAppInit')
+  .then((data) => { 
+    if (data.result) {
+      // Приложение инициализировано
+    } else {
+      // Ошибка
+    }
+  })
+  .catch((error) => {
+    // Ошибка
+    console.log(error);
+  });
 
 document.getElementById("tattooForm").addEventListener("submit", async (e) => {
     e.preventDefault();
