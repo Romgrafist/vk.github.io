@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Запись на тату</title>
+  </head>
+<body>
+    <h1>Запись на тату</h1>
+    <form id="tattooForm">
+        <!-- Стиль -->
+        <label>Стиль тату:</label>
+        <select name="style" required>
+            <option value="реализм">Реализм</option>
+            <option value="минимализм">Минимализм</option>
+            <option value="традишнл">Традишнл</option>
+            <option value="дотворк">Дотворк</option>
+        </select>
+        <br><br>
+
+        <!-- Цветность -->
+        <label>Тату будет:</label><br>
+        <input type="checkbox" id="colorful" name="color" value="Цветная">
+        <label for="colorful">Цветная</label>
+        <input type="checkbox" id="blackwhite" name="color" value="Чёрно-белая">
+        <label for="blackwhite">Чёрно-белая</label>
+        <br><br>
+
+        <!-- Размер -->
+        <label>Размер тату (в см):</label>
+        <input type="text" name="size" placeholder="Например, 10x15" required>
+        <br><br>
+
+        <!-- Место нанесения -->
+        <label>Место нанесения:</label>
+        <select name="placement" required>
+            <option value="плечо">Плечо</option>
+            <option value="предплечье">Предплечье</option>
+            <option value="живот">Живот</option>
+        </select>
+        <br><br>
+
+        <!-- Контакты -->
+        <label>Контактные данные:</label>
+        <input type="text" name="contact" placeholder="Ваш номер телефона или профиль ВКонтакте" required>
+        <br><br>
+
+        <!-- Комментарии -->
+        <label>Комментарий:</label>
+        <textarea name="comments" placeholder="Ваши пожелания"></textarea>
+        <br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script src="\src\components\app.js"></script>
+</body>
+</html>
