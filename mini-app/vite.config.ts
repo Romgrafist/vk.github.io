@@ -42,6 +42,6 @@ export default defineConfig({
   },
 
   build: {
-    outDir: 'build': 'sanity build',
+    outDir: 'build',
   },
 });
