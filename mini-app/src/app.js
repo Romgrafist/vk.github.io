@@ -1,16 +1,12 @@
+import bridge from '@vkontakte/vk-bridge';
+
 // Инициализация VK Bridge
-bridge.send('VKWebAppInit')
-  .then((data) => { 
-    if (data.result) {
-      // Приложение инициализировано
-    } else {
-      // Ошибка
-    }
-  })
-  .catch((error) => {
-    // Ошибка
-    console.log(error);
-  });
+bridge.send('VKWebAppInit').catch(err => console.error(err));
+
+// Дополнительно: Отлов ошибок загрузки
+window.addEventListener('error', (e) => {
+    console.error('Ошибка:', e.message);
+});
 
 document.getElementById("tattooForm").addEventListener("submit", async (e) => {
     e.preventDefault();
